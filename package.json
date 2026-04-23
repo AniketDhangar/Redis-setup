@@ -1,0 +1,21 @@
+{
+  "name": "redis-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.15.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "helmet": "^7.0.0",
+    "ioredis": "^5.10.1",
+    "nodemon": "^3.1.14"
+  }
+}
