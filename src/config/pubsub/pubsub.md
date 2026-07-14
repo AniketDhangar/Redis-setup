@@ -2,6 +2,10 @@
 1.pub = publisher => send message to channel
 2.sub = subscriber => receive message from channel
 
+-- one line definition => 
+pub/sub is a messaging pattern where publishers send messages to channels and subscribers receive messages from those channels without direct communication between publishers and subscribers.
+basically , channels act as middleman  that  sapararates publishers and subscribers , allowing for decoupling and scalability in communication.
+
 ## parts of pub  sub model
 1.publisher => send message to channel  
 2.subscriber => receive message from channel
@@ -43,7 +47,7 @@ eg. "user:created" for user creation events,
 
 3. monitor performance => keep an eye on the performance of your Redis server, as a high volume of messages can impact performance. Consider using Redis Cluster or sharding if necessary.
 
-//4. secure your channels => if your application handles sensitive data, consider implementing authentication and authorization mechanisms to control access to your channels.
+4. secure your channels => if your application handles sensitive data, consider implementing authentication and authorization mechanisms to control access to your channels.
 
 ## FAQ about pub/sub
 1. Can I use pub/sub for critical messages that must not be lost?

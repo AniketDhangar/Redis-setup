@@ -28,11 +28,13 @@
 
 
 // Redis commands for each data type
-1. **String**:
+1. **String**: 
    - `SET key value`: Set the value of a key.
    - `GET key`: Get the value of a key.
    - `INCR key`: Increment the integer value of a key by one.
    - `DECR key`: Decrement the integer value of a key by one.
+- `APPEND key value`: Append a value to the end of a string.
+- `DEL key`: Delete a key and its associated value from the database.
 
 2. **List**:
    - `LPUSH key value`: Prepend a value to a list.
@@ -99,6 +101,10 @@
 7. **Memory Management**: Setting TTL on keys can help manage memory usage in Redis by automatically removing stale data, but it is important to monitor and adjust TTL settings based on your application's needs to avoid unintended data loss.
 8. **Persistence**: When a key with a TTL is saved to disk (e.g., during a snapshot or AOF rewrite), the remaining TTL is also saved. When the key is loaded back into memory, it will have the same remaining TTL as before.
 9. **TTL and Replication**: When a key with a TTL is replicated to a replica, the TTL is also replicated. However, the expiration time is based on the time the key was set on the master, so it may not be exactly the same on the replica due to network latency and replication delay.
+
+-EX => expire in seconds
+-PX => expire in milliseconds
+
 
 
 
